@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="small_step_increase">small step increase</string>
+    <string name="small_step_decrease">small step decrease</string>
+    <string name="large_step_increase">large step increase</string>
+    <string name="large_step_decrease">large step decrease</string>
+</resources>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content"
+    tools:parentTag="android.widget.LinearLayout">
+
+    <com.google.android.material.button.MaterialButton
+
+        android:id="@+id/number_picker_decrease_big"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:contentDescription="@string/large_step_decrease"
+        app:icon="@drawable/ic_h_decrease_big"
+        app:iconGravity="textStart" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/number_picker_decrease"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:contentDescription="@string/small_step_decrease"
+        app:icon="@drawable/ic_h_decrease"
+        app:iconGravity="textStart" />
+
+    <TextView
+        android:id="@+id/number_picker_value"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="@dimen/padding"
+        tools:text="123" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/number_picker_increase"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:contentDescription="@string/small_step_increase"
+        app:icon="@drawable/ic_h_increase"
+        app:iconGravity="textStart" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/number_picker_increase_big"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:contentDescription="@string/large_step_increase"
+        app:icon="@drawable/ic_h_increase_big"
+        app:iconGravity="textStart" />
+
+</merge>
