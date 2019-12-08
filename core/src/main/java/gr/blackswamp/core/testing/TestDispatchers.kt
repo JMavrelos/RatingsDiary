@@ -1,4 +1,4 @@
-package gr.blackswamp.core.testing
+package gr.blackswamp.core
 
 import gr.blackswamp.core.coroutines.IDispatchers
 import kotlinx.coroutines.Dispatchers

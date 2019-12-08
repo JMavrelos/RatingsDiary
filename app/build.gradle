@@ -16,6 +16,7 @@ android {
         targetSdkVersion build_versions.target_sdk
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
+        javaCompileOptions.annotationProcessorOptions.arguments = ["room.schemaLocation": "$projectDir/schemas".toString()]
     }
     androidExtensions {
         experimental = true
@@ -35,9 +36,9 @@ dependencies {
     implementation deps.koin.android_viewmodel //koin
     implementation deps.kotlin.stdlib //kotlin
     implementation deps.coroutines.android //coroutines
+    implementation deps.coroutines.core //coroutines
     implementation deps.room.kotlin //room
     implementation deps.room.runtime //room
-    implementation deps.room.compiler //room
     implementation deps.support.app_compat //design
     implementation deps.support.design //design
     implementation deps.support.annotations //design
@@ -46,17 +47,18 @@ dependencies {
     implementation deps.lifecycle.extensions //lifecycle
     implementation deps.lifecycle.runtime //lifecycle
     implementation deps.lifecycle.extensions //lifecycle
+    implementation deps.lifecycle.kotlin
 
     kapt deps.lifecycle.compiler
+    kapt deps.room.compiler //room
 
     // tests
     testImplementation deps.junit // Junit
     testImplementation deps.robolectric // Robolectric
-    testImplementation deps.koin.test // Koin
     testImplementation deps.mockito.core // Mockito
     testImplementation deps.mockito.kotlin // Mockito
+    testImplementation deps.mockito.all //mockito
     testImplementation deps.arch_core.testing
+    testImplementation deps.coroutines.test // coroutines
     testImplementation deps.room.testing
-    androidTestImplementation deps.atsl.runner
-    androidTestImplementation deps.arch_core.testing
 }

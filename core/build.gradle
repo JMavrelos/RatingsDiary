@@ -15,7 +15,9 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
     }
-
+    androidExtensions {
+        experimental = true
+    }
     buildTypes {
         release {
             minifyEnabled false
@@ -32,4 +34,7 @@ dependencies {
     implementation deps.constraint_layout
     implementation deps.support.core_ktx
     implementation deps.lifecycle.kotlin
+
+    implementation deps.junit // Junit
+    implementation deps.coroutines.test // coroutines
 }

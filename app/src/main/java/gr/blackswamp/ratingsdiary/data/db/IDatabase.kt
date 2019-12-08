@@ -1,5 +1,7 @@
 package gr.blackswamp.ratingsdiary.data.db
 
-interface IDatabase {
+import gr.blackswamp.ratingsdiary.data.db.daos.EntryDao
 
+interface IDatabase {
+    val dao: EntryDao
 }

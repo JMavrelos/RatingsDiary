@@ -4,7 +4,7 @@ import androidx.room.TypeConverter
 import java.text.SimpleDateFormat
 import java.util.*
 
-class DateConverter {
+class DateStringConverter {
     companion object {
         @JvmStatic
         val formatter = SimpleDateFormat("yyyyMMddHHmmss", Locale.ENGLISH)
